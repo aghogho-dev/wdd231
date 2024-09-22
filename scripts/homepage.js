@@ -23,11 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.addEventListener("click", () => {
         nav.classList.toggle("open");
         menu.classList.toggle("open");
+
         nav.querySelectorAll('a').forEach(link => {
             if (nav.classList.contains('open')) {
-                link.style.display = block;
-            } else
+                link.style.display = 'block';
+            } else {
                 link.style.display = 'none';
-        }
+            }
         });
+    });
 });
