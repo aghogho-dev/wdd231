@@ -8,7 +8,7 @@ const courseList = [
 ]
 
 
-documents.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const getYear = document.querySelector("#currentyear");
     const lastModified = document.querySelector("#lastModified");
 
@@ -16,4 +16,18 @@ documents.addEventListener("DOMContentLoaded", () => {
 
     getYear.innerHTML = `${today.getFullYear()}`;
     lastModified.innerHTML = `Last Update: ${today.getDate()}/${today.getMonth()}/${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
-})
+
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector("#menu");
+
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        menu.classList.toggle("open");
+        nav.querySelectorAll('a').forEach(link => {
+            if (nav.classList.contains('open')) {
+                link.style.display = block;
+            } else
+                link.style.display = 'none';
+        }
+        });
+});

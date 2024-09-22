@@ -22,3 +22,152 @@
     --weight-bold: 700;
     --weight-very-bold: 900;
 }
+
+body {
+    font-family: var(--font-poppins);
+    font-size: var(--weight-regular);
+}
+
+#order-header {
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+
+#img-h1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 5px;
+
+}
+
+#menu {
+    display: block;
+    font-size: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px grey;
+    transition: box-shadow 0.3s ease;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 95px;
+    right: 15px;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 0 3px 10px gray;
+    background-color: var(--background-color);
+    /* visibility: hidden; */
+}
+
+
+nav a {
+    text-decoration: none;
+    transition: 0.15s;
+    text-align: left;
+    padding: 1px;
+    font-family: var(--font-lato);
+    font-weight: var(--weight-semibold);
+    border-top: 1px solid gray;
+}
+
+nav a:last-child {
+    border-bottom: 1px solid gray;
+}
+
+
+#img-h1 img {
+    box-shadow: 0 0 30px grey;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+}
+
+
+#menu:hover {
+    box-shadow: 0 3px 10px var(--accent-one-color);
+}
+
+
+nav a:hover,
+nav a:active {
+    color: red;
+    background-color: green;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.open>a {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #menu.open::before {
+    content: "X";
+} */
+
+/* nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* Position the nav independently */
+/* top: 60px; */
+/* Adjust to the correct spot under the menu */
+/* right: 20px; */
+/* background-color: white; */
+/* padding: 10px; */
+/* border: 1px solid grey; */
+/* box-shadow: 0 3px 10px grey; */
+/* z-index: 2; */
+/* } */
+
+
+/* nav a {
+    display: none;
+    text-decoration: none;
+    transition: 0.5s;
+    text-align: left;
+    padding: 1px;
+    font-family: var(--font-lato);
+    font-weight: var(--weight-regular);
+} */
+/* 
+.open a {
+    display: block;
+} */
