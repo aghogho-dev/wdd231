@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: gray;
+    --background-color: #F5F5F5;
+    --accent-color-one: #006666;
+    --accent-color-two: #8C6D1F;
+
+    --weight-regular: 16px;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-lato: "Lato", sans-serif;
+}
+
+body {
+    font-family: var(--font-poppins);
+    font-size: var(--weight-regular);
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: var(--background-color);
+
+}
+
+#profile-head {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#profile-head img {
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu {
+    display: block;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px var(--secondary-color);
+}
+
+#menu:hover {
+    box-shadow: 0 3px 10px var(--accent-color-one);
+}
+
+#menu.open::before {
+    content: "x";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: var(--background-color);
+}
+
+#menu-nav {
+    margin-top: 20px;
+    position: absolute;
+    top: 20%;
+    left: 87%;
+}
+
+nav a {
+    display: none;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: .5px;
+    text-align: left;
+    transition: 0.5s;
+    font-weight: var(--weight-semibold);
+}
+
+.open a {
+    display: block;
+}
+
+nav a:hover,
+nav a:active {
+    background-color: var(--accent-color-two);
+}
