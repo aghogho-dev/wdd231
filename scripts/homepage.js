@@ -48,4 +48,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createCourseTemplate(courseList);
 
-})
+    function filterTemplate(filter) {
+        switch (filter) {
+            case "ALL":
+                createCourseTemplate(courseList);
+                break;
+            case "CSE":
+                createCourseTemplate(courseList.filter(course => course.startsWith("CSE")));
+                break;
+            case "WDD":
+                createCourseTemplate(courseList.filter(course => course.startsWith("WDD")));
+                break;
+            default:
+                createCourseTemplate(courseList);
+                break;
+        }
+    }
+
+    document.querySelectorAll("#select-course .course").forEach((a) => {
+        a.addEventListener("click", (event) => {
+            event.preventDefault();
+            const filter = event.target.id.toUpperCase();
+            filterTemplate(filter);
+        });
+    });
+
+});
