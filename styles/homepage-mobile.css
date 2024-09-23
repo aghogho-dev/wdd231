@@ -125,3 +125,24 @@ h2 {
     background-color: var(--background-color);
     text-align: center;
 }
+
+figure {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+span.course {
+    width: 200px;
+    background-color: var(--accent-color-two);
+}
+
+#select-course {
+    font-weight: var(--weight-bold);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    justify-content: space-around;
+
+}
