@@ -134,7 +134,7 @@ figure {
 
 span.course {
     width: 200px;
-    background-color: var(--accent-color-two);
+    background-color: var(--primary-color);
 }
 
 #select-course {
@@ -144,5 +144,20 @@ span.course {
     gap: 20px;
     text-align: center;
     justify-content: space-around;
+    color: var(--background-color);
+}
 
+#course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.course-span {
+    font-weight: var(--weight-bold);
+    background-color: var(--accent-color-one);
+    padding: 5px;
+    color: var(--background-color)
 }
