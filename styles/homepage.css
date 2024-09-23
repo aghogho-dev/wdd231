@@ -25,12 +25,12 @@
 
 body {
     font-family: var(--font-poppins);
-    font-size: var(--weight-regular);
+    font-size: var(--weight-regular)px;
 }
 
 #order-header {
     display: flex;
-    direction: row;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     background-color: var(--background-color);
