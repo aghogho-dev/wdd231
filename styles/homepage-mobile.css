@@ -161,3 +161,11 @@ span.course {
     padding: 5px;
     color: var(--background-color)
 }
+
+#total-credit {
+    background-color: var(--background-color);
+    font-weight: var(--weight-bold);
+    text-align: center;
+    font-size: larger;
+    color: var(--primary-color);
+}
