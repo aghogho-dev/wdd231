@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: gray;
+    --background-color: #F5F5F5;
+    --accent-color-one: #006666;
+    --accent-color-two: #8C6D1F;
+
+    --weight-regular: 16px;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-lato: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 900px) {
+
+    button#menu,
+    #menu:before,
+    #menu.open:before {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    nav a {
+        display: block;
+        color: var(--background-color);
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        background-color: var(--background-color);
+
+    }
+
+    #menu-nav {
+        margin-top: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        padding: 15px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    section:first-child,
+    section:nth-child(2) {
+        flex-basis: 49%;
+    }
+
+    section:nth-child(3) {
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+}

@@ -169,3 +169,7 @@ span.course {
     font-size: larger;
     color: var(--primary-color);
 }
+
+#select-course span {
+    padding: 10px;
+}
