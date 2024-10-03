@@ -67,7 +67,7 @@ body {
 }
 
 #menuBtn {
-    font-size: 3.5rem;
+    font-size: 3rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -79,8 +79,38 @@ nav a {
     padding: .75rem 3vw;
     text-decoration: none;
     text-align: right;
+    font-size: 1.2rem;
 }
 
 #heading-menu+#navigation {
     margin-top: -40px;
+}
+
+#navigation {
+    display: none;
+    list-style-type: none;
+}
+
+#menuBtn.open::before {
+    content: "x";
+}
+
+#navigation.open {
+    display: block;
+}
+
+#navigation a:hover {
+    background-color: rgba(211, 211, 211, .2);
+}
+
+a:link {
+    color: var(--accent-color-one);
+}
+
+a:visited {
+    color: var(--accent-color-two);
+}
+
+a:active {
+    color: var(--primary-color);
 }
