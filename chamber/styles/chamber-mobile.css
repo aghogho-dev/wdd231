@@ -147,6 +147,10 @@ main section h2 {
     margin-top: 0;
 }
 
+main h1 {
+    margin: 20px;
+}
+
 main section {
     background-color: var(--background-color);
     margin: 20px;
