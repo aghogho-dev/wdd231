@@ -1,6 +1,8 @@
 :root {
     --primary-color: #003366;
     --secondary-color: gray;
+    --secondary-color-light: rgba(211, 211, 211, .2);
+    --secondary-color-medium: rgba(211, 211, 211, .5);
     --background-color: #F5F5F5;
     --accent-color-one: #006666;
     --accent-color-two: #8C6D1F;
@@ -100,7 +102,7 @@ nav a {
 }
 
 #navigation a:hover {
-    background-color: rgba(211, 211, 211, .2);
+    background-color: var(--secondary-color-light);
 }
 
 a:link {
@@ -118,4 +120,58 @@ a:active {
 
 header section:nth-child(2) img {
     width: 100%;
+}
+
+h1,
+h2 {
+    font-family: var(--font-lato);
+}
+
+
+h2 {
+    background-color: var(--secondary-color-medium);
+    padding: .5rem;
+    text-align: center;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+main section h2 {
+    margin-top: 0;
+}
+
+main section {
+    background-color: var(--background-color);
+    margin: 20px;
+}
+
+#first-section {
+    height: 200px;
+
+}
+
+#weather img {
+    display: block;
+}
+
+#weather {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+#weather img {
+    align-self: start;
+}
+
+#second-section {
+    text-align: center;
 }
