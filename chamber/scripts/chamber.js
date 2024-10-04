@@ -52,6 +52,11 @@ const displayData = (companies) => {
         companyIcon.setAttribute("width", "150");
         companyIcon.setAttribute("height", "150");
 
+        companyIcon.onerror = () => {
+            console.error(`Failed to load image: ${company.icon}`);
+            companyIcon.src = "https://placehold.co/50"
+        };
+
         email.innerHTML = `<strong>EMAIL:</strong> ${company.email}`;
         phone.innerHTML = `<strong>PHONE:</strong> ${company.phone}`;
         urlAddress.innerHTML = `<strong>URL:</strong> ${company.website}`;
