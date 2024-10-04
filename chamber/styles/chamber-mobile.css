@@ -149,7 +149,8 @@ main h1 {
     margin: 20px;
 }
 
-main section {
+main section,
+main section:not(3) {
     background-color: var(--background-color);
     margin: 20px;
 }
@@ -195,4 +196,46 @@ footer {
     text-align: center;
     gap: 10px 10px;
     background-color: var(--background-color);
+    border-top: 1px solid var(--secondary-color);
+}
+
+
+#third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#second-section {
+    border-bottom: 1px solid var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+#third-section h2 {
+    margin-top: initial;
+    background-color: initial
+}
+
+.company-cards {
+    background-color: var(--background-color);
+    width: 520px;
+}
+
+#third-section h2 {
+    margin: 0;
+    padding: 0;
+}
+
+#third-section p {
+    margin: 5px;
+}
+
+.logo-contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
 }
