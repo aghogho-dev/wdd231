@@ -49,8 +49,8 @@ const displayData = (companies) => {
         companyIcon.setAttribute("src", company.icon);
         companyIcon.setAttribute("alt", company.name);
         companyIcon.setAttribute("loading", "lazy");
-        companyIcon.setAttribute("width", "300");
-        companyIcon.setAttribute("height", "300");
+        companyIcon.setAttribute("width", "150");
+        companyIcon.setAttribute("height", "150");
 
         email.innerHTML = `<strong>EMAIL:</strong> ${company.email}`;
         phone.innerHTML = `<strong>PHONE:</strong> ${company.phone}`;
