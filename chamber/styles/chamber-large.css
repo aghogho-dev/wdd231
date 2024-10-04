@@ -49,7 +49,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 10px
+        gap: 10px;
     }
 
     #third-section {
@@ -58,8 +58,8 @@
 
 
     .company-cards {
-        margin: 20px;
         padding: 1rem;
+        margin: 10px;
     }
 
     footer {

@@ -149,10 +149,14 @@ main h1 {
     margin: 20px;
 }
 
-main section,
-main section:not(3) {
+main section {
     background-color: var(--background-color);
     margin: 20px;
+}
+
+#third-section {
+    background-color: initial;
+    margin: 0;
 }
 
 #first-section {
