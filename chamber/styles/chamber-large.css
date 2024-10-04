@@ -1,0 +1,73 @@
+@media only screen and (min-width: 40rem) {
+    #menuBtn {
+        display: none;
+    }
+
+    #navigation,
+    #navigation.open {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #heading-menu+#navigation {
+        margin-top: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header section:first-child {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main h1 {
+        flex-basis: 100%;
+    }
+
+    #first-section,
+    #second-section,
+    #forgotten-section {
+        flex-basis: 30%;
+        border-bottom: initial;
+    }
+
+    #third-section {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px
+    }
+
+    #third-section {
+        border-top: 1px solid gray;
+    }
+
+
+    .company-cards {
+        margin: 20px;
+        padding: 1rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+}
