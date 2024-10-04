@@ -46,7 +46,7 @@ const displayData = (companies) => {
         businessName.textContent = company.name;
         businessAddress.textContent = company.address;
 
-        companyIcon.setAttribute("src", `https://aghogho-dev.github.io/wdd231/chamber/images/${company.icon}`);
+        companyIcon.setAttribute("src", company.icon);
         companyIcon.setAttribute("alt", company.name);
         companyIcon.setAttribute("loading", "lazy");
         companyIcon.setAttribute("width", "300");
