@@ -266,6 +266,10 @@ footer {
     text-decoration: none;
 }
 
+#call-to-action {
+    margin-top: 20px;
+}
+
 #current-events {
     display: flex;
     flex-direction: column;
