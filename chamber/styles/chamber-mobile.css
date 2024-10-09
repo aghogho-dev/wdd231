@@ -133,7 +133,7 @@ h2 {
 
 }
 
-main {
+#directory-page {
     display: flex;
     flex-direction: column;
     max-width: 90%;
@@ -141,15 +141,15 @@ main {
 
 }
 
-main section h2 {
+#directory-page section h2 {
     margin-top: 0;
 }
 
-main h1 {
+#directory-page h1 {
     margin: 20px;
 }
 
-main section {
+#directory-page section {
     background-color: var(--background-color);
     margin: 20px;
 }
@@ -243,4 +243,39 @@ footer {
     flex-direction: row;
     gap: 10px;
     text-align: left;
+}
+
+#home-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#index-hero-img img {
+    display: block;
+    width: 100%;
+}
+
+#home-page>section:first-child {
+    margin-bottom: 20px;
+}
+
+#call-to-action a {
+    font-size: x-large;
+    text-decoration: none;
+}
+
+#current-events {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.event-item,
+.highlight-item,
+.newsletter {
+    background-color: var(--background-color);
+    padding: .2rem;
+    margin: 1rem;
 }

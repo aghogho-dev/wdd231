@@ -1,4 +1,4 @@
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 35rem) {
     #menuBtn {
         display: none;
     }
@@ -25,21 +25,21 @@
         justify-content: space-around;
     }
 
-    main {
+    #directory-page {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    main h1 {
+    #directory-page h1 {
         flex-basis: 100%;
     }
 
     #first-section,
     #second-section,
     #forgotten-section {
-        flex-basis: 30%;
+        flex-basis: 25%;
         border-bottom: initial;
     }
 
@@ -67,7 +67,19 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+    }
 
+    .event {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* gap: 4%; */
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .event .event-item {
+        flex-basis: 46%;
     }
 
 }
