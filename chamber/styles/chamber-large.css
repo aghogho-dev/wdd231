@@ -78,8 +78,18 @@
         align-items: center;
     }
 
-    .event .event-item {
-        flex-basis: 46%;
+
+    #weather-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .one-card {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 45%;
     }
 
 }

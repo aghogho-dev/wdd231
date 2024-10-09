@@ -288,3 +288,47 @@ footer {
 .highlights h3 {
     color: var(--accent-color-two);
 }
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+#weather-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.one-card {
+    margin: 10px;
+    padding: .1rem;
+    background-color: var(--background-color);
+    font-size: 1rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.icon-figure img {
+    height: 50px;
+    width: 50px;
+}

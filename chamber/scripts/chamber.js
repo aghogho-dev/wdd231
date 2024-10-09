@@ -83,5 +83,100 @@ const displayData = (companies) => {
     });
 }
 
-getData(url);
+if (thirdSection) getData(url);
 
+
+
+
+const weatherCards = document.querySelector("#weather-cards");
+
+const lat = 4.816;
+const lon = 7.009;
+
+const key = "7298024d2d61482338d2fe637b76c076";
+const units = "imperial";
+
+const urlWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
+
+async function apiFetch() {
+    var data = "";
+
+    try {
+        const response = await fetch(urlWeather);
+
+        if (response.ok) {
+            data = await response.json()
+        } else {
+            throw Error(await response.text())
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    return data;
+}
+
+
+function displayWeather(data) {
+    const listData = data.list.filter(
+        (entry, index) => entry.dt_txt.includes("12:00:00") || index === 0
+    );
+
+    for (let datum of listData) {
+
+        let getDate = datum.dt_txt.split(" ")[0];
+        let getTemp = datum.main.temp;
+        let getIcon = datum.weather[0].icon;
+        let getDesc = datum.weather[0].description;
+
+        let tempFormat = `${getTemp}&deg;F`;
+        let iconSrc = `https://openweathermap.org/img/w/${getIcon}.png`;
+
+        let divEle = document.createElement("div");
+        divEle.setAttribute("class", "one-card");
+
+        let imgEle = document.createElement("img");
+        imgEle.setAttribute("src", iconSrc);
+        imgEle.setAttribute("alt", getDesc);
+
+        let figCap = document.createElement("figcaption");
+        figCap.textContent = getDesc;
+
+        let imgFig = document.createElement("figure");
+        imgFig.setAttribute("class", "icon-figure");
+
+        imgFig.appendChild(imgEle);
+        imgFig.appendChild(figCap);
+
+
+        let pDate = document.createElement("p");
+        pDate.innerHTML = `<strong>Date:</strong> ${getDate}`;
+
+        let pTemp = document.createElement("p");
+        pTemp.innerHTML = `<strong>Temp:</strong> ${tempFormat}`;
+
+        // let pDesc = document.createElement("p");
+        // pDesc.innerHTML = `<strong>Desc:</strong> ${getDesc}`;
+
+        let secondDivEle = document.createElement("div");
+        secondDivEle.setAttribute("class", "inside-card");
+
+        secondDivEle.appendChild(pDate);
+        secondDivEle.appendChild(pTemp);
+        // secondDivEle.appendChild(pDesc);
+
+        divEle.appendChild(imgFig);
+        divEle.appendChild(secondDivEle);
+
+        weatherCards.appendChild(divEle);
+    }
+
+}
+
+if (weatherCards) {
+    apiFetch().then(data => {
+        console.log(data);
+        displayWeather(data);
+    });
+
+}
