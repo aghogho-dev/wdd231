@@ -79,7 +79,8 @@
     }
 
 
-    #weather-cards {
+    #weather-cards,
+    #ads {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

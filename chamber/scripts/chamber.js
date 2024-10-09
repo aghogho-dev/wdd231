@@ -178,5 +178,83 @@ if (weatherCards) {
         console.log(data);
         displayWeather(data);
     });
-
 }
+
+
+const ads = document.querySelector("#ads");
+
+function displaySpotlight(companies) {
+    const spotlightMembers = companies.filter(company =>
+        company.membership_level == 3 || company.membership_level == 2
+    );
+
+    const selectedMembers = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 2);
+
+    ads.innerHTML = "";
+
+    selectedMembers.forEach(company => {
+
+        let divElement = document.createElement("div");
+        let businessName = document.createElement("h2");
+        let businessAddress = document.createElement("p");
+        let divisor = document.createElement("hr");
+
+        let sessionElement = document.createElement("section");
+        let companyIcon = document.createElement("img");
+
+        let divSep = document.createElement("div");
+        let email = document.createElement("p");
+        let phone = document.createElement("p");
+        let urlAddress = document.createElement("p");
+        let memberLevel = document.createElement("p");
+
+
+        businessName.textContent = company.name;
+        businessAddress.textContent = company.address;
+
+        companyIcon.setAttribute("src", company.icon);
+        companyIcon.setAttribute("alt", company.name);
+        companyIcon.setAttribute("loading", "lazy");
+        companyIcon.setAttribute("width", "150");
+        companyIcon.setAttribute("height", "150");
+
+        // companyIcon.onerror = () => {
+        //     console.error(`Failed to load image: ${company.icon}`);
+        //     companyIcon.src = "https://placehold.co/50"
+        // };
+
+        email.innerHTML = `<strong>EMAIL:</strong> ${company.email}`;
+        phone.innerHTML = `<strong>PHONE:</strong> ${company.phone}`;
+        urlAddress.innerHTML = `<strong>URL:</strong> ${company.website}`;
+        memberLevel.innerHTML = `<strong>Membership Level:</strong> ${company.membership_level === 3 ? 'Gold' : 'Silver'}`;
+
+        divElement.setAttribute("class", "company-cards")
+
+        divElement.appendChild(businessName);
+        divElement.appendChild(businessAddress);
+        divElement.appendChild(divisor);
+
+        sessionElement.setAttribute("class", "logo-contacts")
+        sessionElement.appendChild(companyIcon);
+
+        divSep.appendChild(email);
+        divSep.appendChild(phone);
+        divSep.appendChild(urlAddress);
+        divSep.appendChild(memberLevel);
+
+        sessionElement.appendChild(divSep);
+
+        divElement.appendChild(sessionElement);
+
+        ads.appendChild(divElement);
+    });
+}
+
+async function getSpotlightData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    displaySpotlight(data.companies);
+}
+
+if (ads) getSpotlightData(url);
