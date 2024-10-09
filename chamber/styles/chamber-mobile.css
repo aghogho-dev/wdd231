@@ -279,3 +279,8 @@ footer {
     padding: .2rem;
     margin: 1rem;
 }
+
+#home-page h1,
+.highlights h3 {
+    color: var(--accent-color-two);
+}
