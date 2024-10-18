@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aghogho Monorien">
+    <meta name="description" content="The Port Harcourt Chamber of Commers Join Page">
+
+    <meta property="og:title" content="Port Harcourt Chamber of Commerce Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aghogho-dev.github.io/wdd231/images/nigeria-img.png">
+    <meta property="og:url" content="https://aghogho-dev.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="The Port Harcourt Chamber of Commerce Join Page">
+
+
+    <title>Port Harcourt Chamber of Commerce</title>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-mobile.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="../favicon-two.ico" sizes="128x128" />
+
+    <script src="scripts/chamber.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <section>
+
+            <div id="heading-menu">
+
+                <div id="heading">
+                    <img src="../favicon-128x128.png" alt="Port Harcourt Chamber of Commerce Icon" width="128"
+                        height="128">
+                    <div id="heading-title">
+                        <p>Port Harcourt</p>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </div>
+
+                <button id="menuBtn" title="Menu Button"></button>
+
+            </div>
+
+            <div id="navigation">
+                <nav>
+                    <a href="index.html" title="Home">Home</a>
+                    <a href="directory.html" title="Directory">Directory</a>
+                    <a href="join.html" title="Join">Join</a>
+                    <a href="#" title="Discover">Discover</a>
+                </nav>
+
+            </div>
+
+        </section>
+
+
+    </header>
+
+    <main id="join-page">
+        <div id="joins">
+            <h1>Join Us</h1>
+
+            <form action="thankyou.html" method="GET">
+                <label>First Name <input type="text" name="first" title="Enter your first name"
+                        autocomplete="given-name" required></label>
+                <label>Last Name <input type="text" name="last" title="Enter your last name" autocomplete="family-name"
+                        required></label>
+                <label>Organization Title <input type="text" name="organization-title"
+                        title="Enter your organization title (minimum 7 characters, letters, hyphes, and spaces only)"
+                        autocomplete="organization-title" pattern="[A-Za-z0-9\- ]{7,}" required></label>
+                <label>Email Address <input type="email" name="email" title="Enter your email address"
+                        placeholder="flash@phcc.com" autocomplete="email" required></label>
+                <label>Mobile Phone Number <input type="tel" name="mobile-phone" title="Enter your mobile phone number"
+                        autocomplete="223-125-8974" required></label>
+                <label>Organization Name <input type="text" name="organization" title="Enter your organization's name"
+                        autocomplete="organization" required></label>
+                <label>Membership Level
+                    <select name="membership-level" title="Choose your membership level" required>
+                        <option value="" disabled selected>Choose...</option>
+                        <option value="NP Membership" title="For non-profit organizations">NP Membership</option>
+                        <option value="Bronze Membership" title="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership" title="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership" title="Gold Membership">Gold Membership</option>
+                    </select>
+                </label>
+                <label>Organization Description
+                    <textarea name="organization-description" title="Provide a brief description of your organization"
+                        required></textarea>
+                </label>
+                <label><input type="hidden" id="form-timestamp" name="timestamp" value=""></label>
+
+                <label><input type="submit" value="Apply for Membership"></label>
+            </form>
+        </div>
+
+        <div>
+            <h2>Membership Levels</h2>
+
+            <div id="membership-modal">
+                <div class="membership-card">
+                    <p>Non-Profit Membership Level</p>
+                    <button class="member" id="non-profit">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <p>Bronze Membership Level</p>
+                    <button class="member" id="bronze">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <p>Silver Membership Level</p>
+                    <button class="member" id="silver">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <p>Gold Membership Level</p>
+                    <button class="member" id="gold">Learn More</button>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div>
+            <p><strong>Port Harcourt Chamber of Commerce</strong></p>
+            <p>10 Ashgroove Industrial Park</p>
+            <p>Port Harcourt, Rivers State</p>
+            <p>info@phcc.org</p>
+            <p>(234) 555-2300</p>
+        </div>
+
+        <div id="social-media">
+            <img src="images/youtube-icon.png" alt="Port Harcourt Chamber of Commerce YouTube Channel" width="50"
+                height="50">
+            <img src="images/twitter-icon.png" alt="Port Harcourt Chamber of Commerce Twitter Page" width="50"
+                height="50">
+            <img src="images/linkedin-icon.png" alt="Port Harcourt Chamber of Commerce LinkedIn Page" width="50"
+                height="50">
+        </div>
+
+        <div>
+            <p><em>WDD231 Class Project</em></p>
+            <p>Aghogho Monorien</p>
+            <p>&copy;<span id="current-year"></span> Port Harcourt Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -342,3 +342,112 @@ figcaption {
     align-items: center;
     gap: 1rem;
 }
+
+
+form {
+    margin: 1rem 2%;
+
+    label {
+        display: block;
+        font-size: 1rem;
+        color: var(--accent-color-one);
+        padding-top: .2rem;
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    textarea,
+    select {
+        display: block;
+        margin: .1rem 0 1rem 0;
+        padding: .3rem;
+        border: 1px solid #999;
+        border-radius: 4px;
+        border-left-width: 5px;
+        border-left-color: #555;
+        font-size: 1rem;
+        color: #3D405B;
+        width: 60%;
+    }
+
+    input:required,
+    textarea:required,
+    select:required {
+        border-left-color: #d70000;
+    }
+
+    input:focus {
+        border-left-color: black;
+        outline: none;
+    }
+
+    input:required:valid {
+        border-left-color: green;
+    }
+
+    input[type=submit] {
+        border: none;
+        text-align: center;
+        background-color: #3D405B;
+        color: var(--background-color);
+        border-radius: 1rem;
+        padding: .75rem 1.5rem;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+#join-page {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+textarea {
+    height: 150px;
+}
+
+#join-page {
+    p {
+        color: var(--accent-color-one);
+    }
+
+    button {
+        border-radius: 5px;
+    }
+
+    #membership-modal {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .membership-card {
+        border: 1px solid var(--accent-color-one);
+        padding: 10px;
+        margin: 10px;
+        width: 350px;
+        border-radius: 10px;
+        border: 1.5px solid var(--accent-color-one);
+    }
+
+    .membership-card button {
+        cursor: pointer;
+        background-color: initial;
+        color: var(--accent-color-one);
+    }
+
+    .membership-card button:hover {
+        color: var(--accent-color-two);
+    }
+
+
+
+
+}
