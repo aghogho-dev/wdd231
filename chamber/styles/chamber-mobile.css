@@ -414,51 +414,52 @@ textarea {
     height: 150px;
 }
 
-#join-page {
-    p {
-        color: var(--accent-color-one);
-    }
 
-    button {
-        border-radius: 5px;
-    }
 
-    #membership-modal {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
 
-    .membership-card {
-        border: 1px solid var(--accent-color-one);
-        padding: 10px;
-        margin: 10px;
-        width: 350px;
-        height: 150px;
-        border-radius: 10px;
-        border: 1.5px solid var(--accent-color-one);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.25rem;
-    }
 
-    .membership-card button {
-        cursor: pointer;
-        background-color: initial;
-        color: var(--accent-color-one);
-        padding: 1rem;
-        border-radius: 10px;
-    }
+#join-page p {
+    color: var(--accent-color-one);
+}
 
-    .membership-card button:hover {
-        color: var(--accent-color-two);
-    }
+#join-page button {
+    border-radius: 5px;
+}
 
+#join-page #membership-modal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#join-page .membership-card {
+    border: 1px solid var(--accent-color-one);
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1.5px solid var(--accent-color-one);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+#join-page .membership-card button {
+    cursor: pointer;
+    background-color: initial;
+    color: var(--accent-color-one);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#join-page .membership-card button:hover {
+    color: var(--accent-color-two);
 }
 
 
@@ -469,26 +470,27 @@ dialog {
     line-height: 1.5;
     border-radius: 20px;
     box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
-
-    h3 {
-        color: var(--accent-color-one);
-        text-align: center;
-    }
-
-    p {
-        padding: 0.2rem;
-    }
-
-    #close-button {
-        position: absolute;
-        top: 40px;
-        right: 30px;
-        border: none;
-        background: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
 }
+
+dialog h3 {
+    color: var(--accent-color-one);
+    text-align: center;
+}
+
+dialog p {
+    padding: 0.2rem;
+}
+
+dialog #close-button {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 
 
 .membership-card {
