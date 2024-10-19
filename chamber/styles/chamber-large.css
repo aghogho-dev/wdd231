@@ -93,4 +93,20 @@
         flex-basis: 45%;
     }
 
+    #join-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #join-page div {
+        flex-basis: 50%;
+    }
+
+    #join-page h2,
+    #join-page h1 {
+        background-color: initial;
+        font-size: 32px;
+    }
+
 }
