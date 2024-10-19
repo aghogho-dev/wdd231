@@ -346,77 +346,74 @@ figcaption {
 
 form {
     margin: 1rem 2%;
-
-    label {
-        display: block;
-        font-size: 1rem;
-        color: var(--accent-color-one);
-        padding-top: .2rem;
-    }
-
-    input[type=text],
-    input[type=tel],
-    input[type=date],
-    input[type=email],
-    textarea,
-    select {
-        display: block;
-        margin: .1rem 0 1rem 0;
-        padding: .3rem;
-        border: 1px solid #999;
-        border-radius: 4px;
-        border-left-width: 5px;
-        border-left-color: #555;
-        font-size: 1rem;
-        color: #3D405B;
-        width: 60%;
-    }
-
-    input:required,
-    textarea:required,
-    select:required {
-        border-left-color: #d70000;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-        border-left-color: black;
-        outline: none;
-    }
-
-    input:required:valid,
-    textarea:required:valid,
-    select:required:valid {
-        border-left-color: green;
-    }
-
-    input[type=submit] {
-        border: none;
-        text-align: center;
-        background-color: #3D405B;
-        color: var(--background-color);
-        border-radius: 1rem;
-        padding: .75rem 1.5rem;
-        margin: 2rem 0;
-        font-size: 1.2rem;
-        -webkit-appearance: none;
-        appearance: none;
-    }
 }
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: var(--accent-color-one);
+    padding-top: .2rem;
+}
+
+form input[type=text],
+form input[type=tel],
+form input[type=date],
+form input[type=email],
+form textarea,
+form select {
+    display: block;
+    margin: .1rem 0 1rem 0;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: #555;
+    font-size: 1rem;
+    color: #3D405B;
+    width: 60%;
+}
+
+form input:required,
+form textarea:required,
+form select:required {
+    border-left-color: #d70000;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-left-color: black;
+    outline: none;
+}
+
+form input:required:valid,
+form textarea:required:valid,
+form select:required:valid {
+    border-left-color: green;
+}
+
+form input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: #3D405B;
+    color: var(--background-color);
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 
 #join-page {
     max-width: 90%;
     margin: 0 auto;
 }
 
-textarea {
+#join-page textarea {
     height: 150px;
 }
-
-
-
-
 
 #join-page p {
     color: var(--accent-color-one);
