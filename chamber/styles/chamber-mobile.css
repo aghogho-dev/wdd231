@@ -133,7 +133,8 @@ h2 {
 
 }
 
-#directory-page {
+#directory-page,
+#thank-you-page {
     display: flex;
     flex-direction: column;
     max-width: 90%;
@@ -534,4 +535,14 @@ dialog #close-button {
 
 .membership-card:nth-child(4) {
     animation-delay: 0.8s;
+}
+
+#thank-you-page,
+h2 {
+    text-align: left;
+}
+
+#thank-you-page p {
+    line-height: 1.5;
+    padding: 0.1rem;
 }
