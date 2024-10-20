@@ -407,7 +407,8 @@ form input[type=submit] {
 }
 
 
-#join-page {
+#join-page,
+#discover-page {
     max-width: 90%;
     margin: 0 auto;
 }
@@ -545,4 +546,47 @@ h2 {
 #thank-you-page p {
     line-height: 1.5;
     padding: 0.1rem;
+}
+
+
+
+#visitor-message {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+
+#local-image figure img {
+    transition: none;
+}
+
+#local-image figure:hover img {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+#discover-page #main-side {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#side-bar {
+    border-radius: 5px;
+    padding: 0.5rem
+}
+
+#side-bar div {
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+#side-bar div h3,
+#side-bar div p,
+#side-bar div li {
+    padding: 0.3rem 0.5rem;
+
 }

@@ -109,4 +109,40 @@
         font-size: 32px;
     }
 
+    #local-image {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #local-image figure {
+        margin: 1rem;
+        position: relative;
+    }
+
+
+    #local-image figure:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #discover-page #main-side {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #local-image div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #local-image img {
+        width: 400px;
+    }
+
 }
