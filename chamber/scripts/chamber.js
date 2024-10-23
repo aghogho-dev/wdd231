@@ -93,7 +93,7 @@ const weatherCards = document.querySelector("#weather-cards");
 const lat = 4.816;
 const lon = 7.009;
 
-const key = "7298024d2d61482338d2fe637b76c076";
+const key = "";
 const units = "imperial";
 
 const urlWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
