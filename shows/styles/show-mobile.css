@@ -150,3 +150,11 @@ a:visited {
     flex-direction: column;
     gap: 20px;
 }
+
+#home-page {
+    margin-bottom: 20px;
+}
+
+footer {
+    border-top: 1px solid #b3d4fc;
+}
