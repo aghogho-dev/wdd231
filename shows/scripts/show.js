@@ -1,3 +1,6 @@
+import { displayFavoriteMovie, displayFavoriteTVShow, fetchData, fetchTVData } from "../data/getdata.js";
+
+
 const menuBtn = document.querySelector("#menu-btn");
 const navEle = document.querySelector("#menu-links");
 
@@ -43,7 +46,6 @@ function getVisitMessage(lastVisit, now) {
     const timeDiff = Math.abs(now - lastVisitDate);
     const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
-    console.log(daysDiff);
 
     if (daysDiff < 1) {
         return "Back so soon! Awesome!";
@@ -53,3 +55,11 @@ function getVisitMessage(lastVisit, now) {
 }
 
 window.onload = checkLastVisit;
+
+
+displayFavoriteMovie(true);
+displayFavoriteMovie(false);
+displayFavoriteTVShow();
+
+console.log(fetchTVData(2734));
+console.log(fetchData(519182));

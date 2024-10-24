@@ -29,4 +29,16 @@
         flex-direction: row;
         justify-content: space-around;
     }
+
+    #movie-show,
+    #tv-show {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .movie,
+    .tv {
+        flex-basis: 25%;
+        max-height: 650px;
+    }
 }

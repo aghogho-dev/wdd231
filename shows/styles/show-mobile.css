@@ -5,7 +5,9 @@
 }
 
 header,
-footer {
+footer,
+h2,
+h3 {
     font-family: var(--font-playwrite);
 }
 
@@ -18,8 +20,14 @@ footer {
 }
 
 
-header h1 {
+header h1,
+#home-page h2,
+#home-page h3 {
     padding: 0 0 0 3vw;
+}
+
+#home-page p {
+    padding: 0 3vw;
 }
 
 #menu-btn::before {
@@ -67,7 +75,7 @@ header {
 
 #menu-links {
     align-self: flex-end;
-    background-color: aquamarine;
+    background-color: #e7f3fe;
     width: 100%;
 }
 
@@ -105,4 +113,40 @@ a:visited {
     padding: 15px;
     margin-top: 20px;
     transition: all 0.3s ease;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    max-height: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
+.movie img,
+.tv img {
+    height: 50%;
+    max-height: 500px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.movie,
+.tv {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f3fe;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+}
+
+#movie-show,
+#tv-show {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
