@@ -97,3 +97,12 @@ a:visited {
     display: flex;
     gap: 20px;
 }
+
+#visitor-message {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
