@@ -1,0 +1,27 @@
+@media only screen and (min-width: 45rem) {
+
+    #menu-btn {
+        display: none;
+    }
+
+    #menu-links {
+        display: block;
+        align-self: initial;
+        background-color: initial;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #first-line,
+    #menu-links {
+        flex-basis: 50%;
+    }
+
+    nav {
+        display: flex;
+    }
+}

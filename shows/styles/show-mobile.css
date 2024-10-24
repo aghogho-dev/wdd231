@@ -1,0 +1,79 @@
+:root {
+    --font-lato: "Lato", sans-serif;
+    --font-garamond: "EB Garamond", serif;
+    --font-playwrite: "Playwrite GB S", cursive;
+}
+
+header {
+    font-family: var(--font-playwrite);
+}
+
+
+#first-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header h1 {
+    padding: 0 0 0 3vw;
+}
+
+#menu-btn::before {
+    content: "≡";
+}
+
+#menu-btn {
+    font-size: 5rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+    padding: .25rem 5vw 0 0;
+}
+
+
+#menu-links a {
+    display: block;
+    padding: .75rem 3vw;
+    text-decoration: none;
+    text-align: left;
+    font-size: x-large;
+    text-align: right;
+}
+
+
+#menu-btn.open::before {
+    content: "x";
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+#menu-links.open {
+    display: block;
+}
+
+#menu-links {
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-links {
+    align-self: flex-end;
+    background-color: aquamarine;
+    width: 100%;
+}
+
+#menu-links a:hover {
+    background-color: beige;
+}
+
+a:visited {
+    color: red;
+}
