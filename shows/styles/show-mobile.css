@@ -4,7 +4,8 @@
     --font-playwrite: "Playwrite GB S", cursive;
 }
 
-header {
+header,
+footer {
     font-family: var(--font-playwrite);
 }
 
@@ -76,4 +77,23 @@ header {
 
 a:visited {
     color: red;
+}
+
+#footer-div div:first-child p:first-child {
+    font-size: x-large;
+}
+
+#footer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+}
+
+#social-media {
+    display: flex;
+    gap: 20px;
 }

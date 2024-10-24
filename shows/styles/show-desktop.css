@@ -24,4 +24,9 @@
     nav {
         display: flex;
     }
+
+    #footer-div {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
