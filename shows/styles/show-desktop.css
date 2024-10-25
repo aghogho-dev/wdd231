@@ -16,9 +16,12 @@
         justify-content: center;
     }
 
-    #first-line,
+    #first-line {
+        flex-basis: 60%;
+    }
+
     #menu-links {
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 
     nav {
