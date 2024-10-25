@@ -21,6 +21,7 @@ lastModified.innerHTML = `Last Modification: ${today.getDate()}/${today.getMonth
 const searchForm = document.getElementById("search-form");
 const movieShow = document.getElementById("movie-show");
 const tvShow = document.getElementById("tv-show");
+const heading = document.getElementById("search-heading");
 
 searchForm.addEventListener("submit", event => {
     event.preventDefault();
@@ -36,7 +37,8 @@ searchForm.addEventListener("submit", event => {
     console.log(searchData);
 
     movieShow.innerHTML = "";
-    tvShow.innerText = "";
+    tvShow.innerHTML = "";
+    heading.textContent = "Search Results";
 
     searchData
         .then(results => {
