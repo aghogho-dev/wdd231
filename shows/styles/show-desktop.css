@@ -41,4 +41,14 @@
         flex-basis: 25%;
         max-height: 650px;
     }
+
+    #search-page {
+        max-width: 60%;
+    }
+
+    #search-results {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
