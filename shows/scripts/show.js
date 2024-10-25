@@ -54,12 +54,21 @@ function getVisitMessage(lastVisit, now) {
     }
 }
 
-window.onload = checkLastVisit;
 
+
+window.onload = checkLastVisit;
 
 displayFavoriteMovie(true);
 displayFavoriteMovie(false);
 displayFavoriteTVShow();
 
-console.log(fetchTVData(2734));
-console.log(fetchData(519182));
+
+
+
+// console.log(fetchTVData(2734));
+// console.log(fetchData(519182));
+
+
+
+
+

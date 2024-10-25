@@ -50,6 +50,7 @@ function displayTV(data) {
     const imgEle = document.createElement("img");
     imgEle.setAttribute("src", `https://image.tmdb.org/t/p/w500/${data.poster_path}`);
     imgEle.setAttribute("alt", `${data.name}`);
+    imgEle.setAttribute("loading", "lazy");
 
     const describeDiv = document.createElement("div");
     describeDiv.classList.add("describe-tv");
@@ -93,6 +94,7 @@ function displayMovie(data, isHero) {
         const imgEle = document.createElement("img");
         imgEle.setAttribute("src", `https://image.tmdb.org/t/p/w500/${data.poster_path}`);
         imgEle.setAttribute("alt", `${data.title}`);
+        imgEle.setAttribute("loading", "lazy");
 
         const describeDiv = document.createElement("div");
         describeDiv.classList.add("describe-movie");
@@ -113,7 +115,7 @@ function displayMovie(data, isHero) {
 
         movieShow.appendChild(movieEle);
     } else {
-        hero.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.title}">`;
+        hero.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.title}" loading="lazy">`;
     }
 }
 
@@ -146,6 +148,22 @@ function displayFavoriteTVShow() {
     });
 }
 
-export { displayFavoriteMovie, fetchData, fetchTVData, displayFavoriteTVShow };
+function getSearchResults(searchType, query) {
+
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkY2UwOWI4MWNlMDcwYWY1MTk4MGVjYjgzMDRmNzBhNiIsIm5iZiI6MTcyOTgxNTI2Mi4xMTg5ODIsInN1YiI6IjY3MTkxNGJhNGJlMTU0NjllNzBkNWMzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-4KWNNhr40eLWNyCeDv8LcmSmwAF7j4l5gwWiT2-_bY'
+        }
+    };
+
+    return fetch(`https://api.themoviedb.org/3/search/${searchType}?query=${query}&include_adult=false&language=en-US&page=1`, options)
+        .then(res => res.json())
+        .then(res => res.results)
+        .catch(err => console.error(err));
+}
+
+export { displayFavoriteMovie, fetchData, fetchTVData, displayFavoriteTVShow, getSearchResults, displayMovie, displayTV };
 
 
