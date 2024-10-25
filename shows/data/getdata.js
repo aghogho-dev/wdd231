@@ -52,6 +52,10 @@ function displayTV(data) {
     imgEle.setAttribute("alt", `${data.name}`);
     imgEle.setAttribute("loading", "lazy");
 
+    const openModal = document.createElement("button");
+    openModal.classList.add("open-modal");
+    openModal.textContent = "Learn More";
+
     const describeDiv = document.createElement("div");
     describeDiv.classList.add("describe-tv");
     const describeHeader = document.createElement("h3");
@@ -66,11 +70,35 @@ function displayTV(data) {
     describeDiv.appendChild(overview);
 
 
+
+    const dialogBox = document.createElement("dialog");
+    dialogBox.classList.add("modal");
+    const closeModal = document.createElement("button");
+    closeModal.classList.add("close-modal");
+    closeModal.textContent = `❌`;
+
+    dialogBox.appendChild(describeDiv);
+    dialogBox.appendChild(closeModal);
+
     tvEle.appendChild(imgEle);
-    tvEle.appendChild(describeDiv);
+    tvEle.appendChild(openModal);
+    tvEle.appendChild(dialogBox);
+
+
+    // tvEle.appendChild(imgEle);
+    // tvEle.appendChild(describeDiv);
 
     tvShow.appendChild(tvEle);
+
+    openModal.addEventListener("click", () => {
+        dialogBox.showModal();
+    });
+
+    closeModal.addEventListener("click", () => {
+        dialogBox.close();
+    });
 }
+
 
 function displayMovie(data, isHero) {
     if (!data) {
@@ -96,6 +124,10 @@ function displayMovie(data, isHero) {
         imgEle.setAttribute("alt", `${data.title}`);
         imgEle.setAttribute("loading", "lazy");
 
+        const openModal = document.createElement("button");
+        openModal.classList.add("open-modal");
+        openModal.textContent = "Learn More";
+
         const describeDiv = document.createElement("div");
         describeDiv.classList.add("describe-movie");
         const describeHeader = document.createElement("h3");
@@ -110,10 +142,29 @@ function displayMovie(data, isHero) {
         describeDiv.appendChild(overview);
 
 
+        const dialogBox = document.createElement("dialog");
+        dialogBox.classList.add("modal");
+        const closeModal = document.createElement("button");
+        closeModal.classList.add("close-modal");
+        closeModal.textContent = `❌`;
+
+        dialogBox.appendChild(describeDiv);
+        dialogBox.appendChild(closeModal);
+
         movieEle.appendChild(imgEle);
-        movieEle.appendChild(describeDiv);
+        movieEle.appendChild(openModal);
+        movieEle.appendChild(dialogBox);
 
         movieShow.appendChild(movieEle);
+
+        openModal.addEventListener("click", () => {
+            dialogBox.showModal();
+        });
+
+        closeModal.addEventListener("click", () => {
+            dialogBox.close();
+        });
+
     } else {
         hero.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.title}" loading="lazy">`;
     }
@@ -163,6 +214,7 @@ function getSearchResults(searchType, query) {
         .then(res => res.results)
         .catch(err => console.error(err));
 }
+
 
 export { displayFavoriteMovie, fetchData, fetchTVData, displayFavoriteTVShow, getSearchResults, displayMovie, displayTV };
 

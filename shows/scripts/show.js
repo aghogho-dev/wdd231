@@ -63,6 +63,32 @@ displayFavoriteMovie(false);
 displayFavoriteTVShow();
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+
+//     const idx = 0;
+
+//     const dialogBoxes = document.querySelectorAll("dialog");
+//     const modalCloseBtns = document.querySelectorAll(".close-modal");
+//     const modalOpenBtns = document.querySelectorAll(".open-modal");
+
+
+//     modalOpenBtns.forEach((btn, index) => {
+//         btn.addEventListener("click", () => {
+//             console.log(index);
+//             const targetDialog = dialogBoxes[index];
+//             if (targetDialog) targetDialog.showModal();
+//         });
+//     });
+
+
+//     modalCloseBtns.forEach((btn, index) => {
+//         btn.addEventListener("click", () => {
+//             const targetDialog = dialogBoxes[index];
+//             if (targetDialog) targetDialog.close();
+//         });
+//     });
+// });
+
 
 
 // console.log(fetchTVData(2734));

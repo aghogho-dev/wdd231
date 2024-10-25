@@ -140,8 +140,10 @@ a:visited {
     background-color: #e7f3fe;
     padding: 20px;
     width: 90%;
+    height: 50%;
     margin: 0 auto;
     border-radius: 1.5rem;
+    gap: 20px;
 }
 
 .movie img,
@@ -213,12 +215,57 @@ footer {
 #search-page button {
     width: 80%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    /* background-color: #007bff; */
+    /* color: #fff; */
+    /* border: none; */
     border-radius: 4px;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: var(--font-playwrite);
 
+}
+
+#search-page .close-modal {
+    width: inherit;
+}
+
+.open-modal {
+    display: block;
+    background-color: initial;
+    width: 120px;
+    align-self: center;
+    padding: 10px;
+    font-family: var(--font-playwrite);
+    cursor: pointer;
+}
+
+
+
+dialog {
+    padding: 1.2rem;
+    max-width: 50ch;
+    border: 0;
+    line-height: 1.5;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
+}
+
+dialog h3 {
+    color: var(--accent-color-one);
+    text-align: center;
+}
+
+dialog p {
+    padding: 0.2rem;
+}
+
+dialog .close-modal {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
