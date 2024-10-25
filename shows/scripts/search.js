@@ -15,7 +15,7 @@ const lastModified = document.querySelector("#last-modified");
 const today = new Date();
 
 getYear.innerHTML = `${today.getFullYear()}`;
-lastModified.innerHTML = `Last Modification: ${today.getDate()}/${today.getMonth()}/${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+lastModified.innerHTML = `Last Modification: ${today.getDate()}/${today.getMonth()}/${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
 
 const searchForm = document.getElementById("search-form");
@@ -29,7 +29,20 @@ searchForm.addEventListener("submit", event => {
     const query = document.getElementById("search-query").value;
     const searchType = document.querySelector('input[name="search-type"]:checked').value;
 
+
+    if (!query) return;
+
     console.log(`Searching for ${searchType}: ${query}`);
+
+    let searches = JSON.parse(localStorage.getItem("searches")) || [];
+
+    const existingSearch = searches.find(item => item.query.trim().toLowerCase() === query.trim().toLowerCase() && item.type === searchType);
+
+    if (existingSearch) existingSearch.count += 1;
+    else searches.push({ query, type: searchType, count: 1 });
+
+    localStorage.setItem("searches", JSON.stringify(searches));
+
 
     const searchData = getSearchResults(searchType, query);
 
@@ -46,7 +59,5 @@ searchForm.addEventListener("submit", event => {
                 if (searchType === "movie") displayMovie(result, false);
                 else displayTV(result);
             });
-        })
-
-
+        });
 });

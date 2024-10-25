@@ -59,4 +59,14 @@
     .tv img {
         height: 80%;
     }
+
+    #join-page {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #joins,
+    #searches {
+        flex-basis: 50%;
+    }
 }

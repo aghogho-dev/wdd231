@@ -181,7 +181,9 @@ footer {
     border-top: 1px solid #b3d4fc;
 }
 
-#search-page {
+#search-page,
+#joins,
+#searches {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -207,12 +209,53 @@ footer {
     border-radius: 8px;
 }
 
+#join-page form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--font-garamond);
+
+}
+
+#join-page input[type="text"],
+#join-page input[type=tel],
+#join-page input[type=date],
+#join-page input[type=email] {
+    display: block;
+    margin: .1rem 0 1rem 0;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: #555;
+    font-size: 1rem;
+    color: #3D405B;
+    width: 60%;
+}
+
+#join-page input:required {
+    border-left-color: #d70000;
+}
+
+#join-page input:focus {
+    border-left-color: black;
+    outline: none;
+}
+
+#join-page input:required:valid {
+    border-left-color: green;
+}
+
+
 #search-page #radio-group label {
     margin-right: 15px;
     display: inline-block;
 }
 
-#search-page button {
+#search-page button,
+#join-page input[type=submit] {
     width: 80%;
     padding: 10px;
     /* background-color: #007bff; */
@@ -224,6 +267,10 @@ footer {
     font-size: 1.2rem;
     font-family: var(--font-playwrite);
 
+}
+
+#join-page input[type=submit] {
+    width: initial;
 }
 
 #search-page .close-modal {
@@ -268,4 +315,15 @@ dialog .close-modal {
     background: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+#top-searches {
+    font-size: var(--font-garamond);
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#form-results {
+    font-family: var(--font-playwrite);
+    text-align: left;
 }
